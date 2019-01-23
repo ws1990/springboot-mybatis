@@ -37,6 +37,12 @@ public class StudentController {
         List<Student> list = studentService.list(wrapper);
         System.out.println(list);
 
+        List<Student> list2 = studentService.findByName(name);
+        System.out.println(list2);
+
+        List<Student> list3 = studentService.findByNameUseMapper(name);
+        System.out.println(list3);
+
         return list;
     }
 

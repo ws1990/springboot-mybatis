@@ -3,6 +3,8 @@ package com.ws.study.springboot.mybatis.edu.service;
 import com.ws.study.springboot.mybatis.edu.entity.Student;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  * 学生表 服务类
@@ -13,4 +15,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface StudentService extends IService<Student> {
 
+    List<Student> findByName(String name);
+
+    List<Student> findByNameUseMapper(String name);
 }
