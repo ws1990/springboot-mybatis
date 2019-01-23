@@ -44,7 +44,7 @@ public class MysqlGenerator {
 
 
     public static void main(String[] args) {
-        generate("王松","com.ws.study.springboot.mybatis", "edu");
+        generate("王松","com.ws.study.springboot.mybatis.edu", "edu");
     }
 
 
@@ -220,6 +220,7 @@ public class MysqlGenerator {
          * @return
          */
         public Map<String, String> getEntityNames(String... tablePrefixArray) {
+            //该sql语句目前支持mysql
             String sql = "SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = '" + database + "'";
             if (tablePrefixArray != null && tablePrefixArray.length != 0) {
                 sql += " and (";
